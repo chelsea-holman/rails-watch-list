@@ -1,0 +1,36 @@
+<nav class="navbar navbar-dark justify-content-between container-fluid">
+<div>
+<a href="#" class="logo-img"><%= image_tag "Cinema1.png", alt: "The Flick List", width: 70%></a>
+  <a class="navbar-brand brand" href="#">The Flick List</a></div>
+
+</nav>
+
+<h2><%=  @list.name %></h2>
+
+
+<div class="row d-flex justify-content-around">
+<% @list.movies.each do |movie| %>
+<% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
+<div class="card" style="width: 20rem;">
+  <%= image_tag "https://image.tmdb.org/t/p/original/#{bookmark.movie.poster_url}", width: 200,class:"card-img-top" %>
+  <div class="card-body">
+    <h5 class="card-title"><%= movie.title %></h5>
+    <p class="card-text"><%= movie.overview %></p>
+    <p class="card-text"><%=  movie.rating %></p>
+    <p class="card-text"><%=  bookmark.comment %></p>
+    <%= link_to "delete", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure you want to remove #{movie.title} from your #{@list.name} list"}, class: 'text-danger' %>
+
+  </div>
+</div>
+<% end %>
+</div>
+
+
+
+<%= simple_form_for [ @list, @bookmark ] do |f| %>
+  <%= f.association :movie %>
+  <%= f.input :comment %>
+  <%= f.submit "Submit", class: "btn btn-primary" %>
+<% end %>
+
+<%= link_to 'Back to all lists', lists_path %>

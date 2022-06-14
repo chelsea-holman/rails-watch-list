@@ -1,0 +1,30 @@
+// Place all the styles related to the lists controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+  .brand {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: auto 0;
+  }
+
+  .navbar-brand {
+    padding: 0;
+  }
+
+
+.navbar {
+  background-color: #115173;
+}
+
+.list_name, .form-label{
+  color: white;
+  display: inline-block;
+}
+
+
+body {
+  background-color: #022C43;
+
+}

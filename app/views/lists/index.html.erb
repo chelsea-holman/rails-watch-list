@@ -1,0 +1,25 @@
+<nav class="navbar navbar-dark justify-content-between container-fluid align-items-center">
+<div>
+<a href="#" class="logo-img"><%= image_tag "Cinema1.png", alt: "The Flick List", width: 60%></a>
+  <a class="navbar-brand brand" href="#">The Flick List</a></div>
+
+<div class="form-inline">
+    <%= simple_form_for(@list) do |f| %>
+    <%= f.input :name, placeholder: 'New list name', label:false %>
+    <%= f.submit %>
+  <% end %>
+</div>
+</nav>
+
+<div class="container row d-flex justify-content-around ">
+  <% @lists.each do |list| %>
+  <% bookmark = Bookmark.find_by(list: list, movie: @movie) %>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><%= list.name %></h5>
+      <p class="card-text"><%= pluralize(list.movies.count, "movie") %> </p>
+      <%= link_to 'See list', list_path(list) %>
+    </div>
+  </div>
+    <% end %>
+</div>
