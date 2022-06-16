@@ -1,0 +1,65 @@
+.home-image {
+  background-image: image-url('cinema-new.jpg');
+  opacity: .8;
+  height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-text {
+
+  width: 50%;
+  text-align: left;
+    position: absolute;
+    top: 23%;
+    left: 55%;
+    transform: translate(-100%, -50%);
+    color: white;
+    font-size: 24px;
+
+    h1{
+      font-size: 5rem;
+      font-family: 'Lobster', cursive;
+    }
+
+}
+
+.mov {
+  height: 100px;
+  padding: 10px;
+}
+
+
+.button {
+  background-color: #D89216;
+  border: none;
+  color: white;
+  margin-top: 10px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: #ad6f03;
+    color: white;
+    transition: all 1s ease;
+  }
+}
+
+
+@media (max-width: 750px) {
+.hero-text {
+  font-size: 18px;
+  width: 90%;
+  top: 23%;
+    left: 100%;
+  h1{
+    font-size: 3rem;
+}
+}
+}

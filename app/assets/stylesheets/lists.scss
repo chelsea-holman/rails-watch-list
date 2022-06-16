@@ -11,20 +11,97 @@
 
   .navbar-brand {
     padding: 0;
+    font-family: 'Lobster', cursive;
   }
 
-
+.home-container {
+  max-width: 80%;
+}
 .navbar {
-  background-color: #115173;
+  background-color: #827397;
+  margin-bottom: 20px;
 }
 
 .list_name, .form-label{
   color: white;
   display: inline-block;
+
+}
+
+.submit-btn {
+  background-color: #D89216;
+  border: none;
+  color: white;
 }
 
 
-body {
-  background-color: #022C43;
+.list-show {
+  margin-left: 250px;
+}
+
+.card {
+  margin: 10px;
+  text-align: center;
+}
+
+.sidenav {
+  height: 400px; /* Full-height: remove this if you want "auto" height */
+  width: 250px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+
+  margin-left: 10px;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  margin-top: 20px;
+  border: 1.5px solid #827397;
+  h3 {
+    font-family: 'Lobster', cursive;
+  }
+}
+
+h5 {
+  font-family: 'Lobster', cursive;
+  font-size: 28px;
+  color: #827397;
+}
+
+.sidenav-content {
+  margin: auto 0;
+  text-align: center;
+}
+
+.list-btn {
+  background-color: #D89216;
+  border: none;
+  color: white;
+  margin-top: 10px;
+  padding: 8px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: #ad6f03;
+    color: white;
+    transition: all 1s ease;
+  }
+}
+
+.delete-btn {
+  text-decoration: none;
+  color: black;
+
+}
+
+@media (max-width: 600px) {
+.sidenav {
+  display: none;
+}
+
+
+.list-show {
+  margin-left: 0px;
+}
 
 }

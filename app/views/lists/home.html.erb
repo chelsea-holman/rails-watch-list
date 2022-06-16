@@ -1,0 +1,22 @@
+<div class="home-image">
+<div class="hero-text">
+<h1>The Watch List</h1>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<div>
+<span class="mov"></span>
+</div>
+<%= link_to "See Movies", lists_path, class: 'button' %>
+</div>
+</div>
+
+
+
+<script>
+    var typed = new Typed(".mov",{
+    strings: ["Find your next favorite comedy movie.",  "Find your next favorite action movie.","Find your next favorite romance movie.","Find your next favorite movie on The Watch List."] ,
+    typeSpeed: 50,
+    backSpeed: 50,
+    loop: true,
+    showCursor: false
+    })
+</script>
